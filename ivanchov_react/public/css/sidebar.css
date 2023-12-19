@@ -82,6 +82,11 @@
     margin: 0px;
 }
 
+.buttonOnClose{
+    border-style: none;
+    background-color: white;
+}
+
 .sidebar-nav-list .nav-header {
     margin-bottom: 0;
     color: #eee;

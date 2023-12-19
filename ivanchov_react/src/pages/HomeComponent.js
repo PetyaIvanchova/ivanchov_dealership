@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderComponent from "../components/HeaderComponent";
 import IntroComponent from "../components/IntroComponent";
 import BestComponent from "../components/BestComponent";
@@ -7,10 +7,12 @@ import OffersComponent from "../components/OffersComponent";
 import SideBarComponent from "../components/SideBarComponent";
 
 const HomeComponent = () => {
+  const [isSideBarActive, setActiveSideBar] = useState(false);
+ 
   return (
     <>
-    <HeaderComponent />
-    <SideBarComponent />
+    <HeaderComponent isSideBarActive={isSideBarActive} toggleSideBar={setActiveSideBar}/>
+    <SideBarComponent isActive={isSideBarActive} isSideBarActive={isSideBarActive} toggleSideBar={setActiveSideBar}/> 
     <IntroComponent />
     <OffersComponent />
     <BestComponent />

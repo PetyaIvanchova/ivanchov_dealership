@@ -5,19 +5,19 @@ import BestComponent from "../components/BestComponent";
 import FooterComponent from "../components/FooterComponent";
 import OffersComponent from "../components/OffersComponent";
 
-const SideBarComponent = () => {
+const SideBarComponent = ({isActive, toggleSideBar, isSideBarActive}) => {
   return (
     <>
+
+    <nav id="sidebar" className={`nav-sidebar ${isActive ? 'active' : ''}`}>
     
-    <nav id="sidebar" className="nav-sidebar">
-    
-    <div id="dismiss">
-        <i className="fa fa-close"></i>
+    <div id="dismiss" >
+        <button className="buttonOnClose" onClick={() => toggleSideBar(!isSideBarActive)} ><i className="fa fa-close"></i></button>
     </div>
     <div className="sidebar-inner">
         <div className="sidebar-logo">
             <a href="index.html">
-                <img src="./img/logos/black-logo.png" alt="sidebarlogo" />
+                <img src="/LOGO copy.png" alt="sidebarlogo" />
             </a>
         </div>
         <div className="sidebar-navigation">

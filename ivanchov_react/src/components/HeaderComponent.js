@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeaderComponent = () => {
+const HeaderComponent = ({isSideBarActive, toggleSideBar}) => {
   return (
     <header className="main-header sticky-header sh-2">
     <div className="container">
@@ -8,7 +8,7 @@ const HeaderComponent = () => {
             <a className="navbar-brand company-logo-2" href="index.html">
                 <img src="/LOGO copy.png" alt="logo" />
             </a>
-            <button className="navbar-toggler" type="button" id="drawer">
+            <button onClick={() => toggleSideBar(!isSideBarActive)} className="navbar-toggler" type="button" id="drawer">
                 <span className="fa fa-bars"></span>
             </button>
             <div className="navbar-collapse collapse w-100 justify-content-end" id="navbar">
